@@ -16,7 +16,7 @@ export const metadata = {
   title: process.env.APP_NAME,
   description: process.env.APP_DESCRIPTION,
   openGraph: {
-    images: [metaImage.src],
+    images: [process.env.HOST_URL + metaImage.src],
   },
 };
 

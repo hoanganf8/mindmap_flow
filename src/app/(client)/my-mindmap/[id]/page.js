@@ -18,7 +18,7 @@ export const generateMetadata = async ({ params }) => {
         description: mindmap?.seo?.description
           ? mindmap?.seo?.description
           : mindmap.description,
-        images: [mindmap?.seo?.image ? mindmap?.seo?.image : metaImage.src],
+        images: [mindmap?.seo?.image ? mindmap?.seo?.image : process.env.HOST_URL + metaImage.src],
       },
     };
   }
