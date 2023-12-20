@@ -18,6 +18,7 @@ export const metadata = {
   openGraph: {
     images: [process.env.HOST_URL + metaImage.src],
   },
+  metadataBase: process.env.HOST_URL,
 };
 
 export default function RootLayout({ children }) {

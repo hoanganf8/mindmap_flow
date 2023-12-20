@@ -18,18 +18,20 @@ const nextConfig = {
       },
     ];
   },
-  swcMinify: false,
-	experimental: {
-        serverActions: {
-		allowedOrigins: ["f8-mindmap.sanphamkythuat.online:880", "localhost:8000", "f8-mindmap.sanphamkythuat.online"],
-        allowedForwardedHosts: ["f8-mindmap.sanphamkythuat.online:880"]
-
-	},
+  // swcMinify: false,
+  experimental: {
+    serverActions: {
+      allowedOrigins: [
+        "f8-mindmap.sanphamkythuat.online:880",
+        "localhost:8000",
+        "f8-mindmap.sanphamkythuat.online",
+      ],
+      allowedForwardedHosts: ["f8-mindmap.sanphamkythuat.online:880"],
     },
-	images: {
-    domains: ['f8-mindmap.sanphamkythuat.online']
-  }
-
+  },
+  images: {
+    domains: ["f8-mindmap.sanphamkythuat.online"],
+  },
 };
 
 module.exports = nextConfig;

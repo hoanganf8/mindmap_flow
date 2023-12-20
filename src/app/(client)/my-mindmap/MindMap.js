@@ -102,7 +102,7 @@ const MindMap = ({ id: mapId }) => {
     document.addEventListener("keyup", (e) => {
       if (e.key === "Delete" && selectedId !== false && selectedId !== "0") {
         setNodes((nodes) => nodes.filter((node) => node.id !== selectedId));
-        // setEdges((edges) => edges.filter((edge) => edge.source !== selectedId));
+        setEdges((edges) => edges.filter((edge) => edge.source !== selectedId));
       }
     });
   }, [selectedId, setNodes, setEdges]);
@@ -162,6 +162,7 @@ const MindMap = ({ id: mapId }) => {
         onEdgeClick={(_, { id }) => {
           setSelected(id);
         }}
+        deleteKeyCode={false}
       >
         <Controls />
         <Background variant="dots" gap={12} size={1} />
